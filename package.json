@@ -1,0 +1,31 @@
+{
+  "name": "bcgov-wp-design-system-blocks",
+  "version": "0.1.0",
+	"author": "Bcgov Wordpress <govwordpress@gov.bc.ca>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bcgov/bcgov-wp-design-system-blocks.git"
+	},
+	"bugs": {
+		"url": "https://github.com/bcgov/bcgov-wp-design-system-blocks/issues"
+	},
+	"licenses": "Apache-2.0",
+	"scripts": {
+		"build": "wp-scripts build  --output-path=dist",
+		"format": "wp-scripts format ./src",
+		"lint:css": "wp-scripts lint-style ./src/styles",
+		"lint:js": "wp-scripts lint-js ./src/scripts",
+		"packages-update": "wp-scripts packages-update",
+		"start": "wp-scripts start --output-path=dist",
+		"test:e2e": "wp-scripts test-e2e",
+		"test": "wp-scripts test-unit-js"
+	},
+	"engines": {
+		"npm": ">=8.0.0 <9.0.0",
+		"node": ">=18.0.0 <20.0.0"
+	},
+	"devDependencies": {
+		"@bcgov/webpack-wordpress": "git+https://apps.itsm.gov.bc.ca/bitbucket/scm/wp/bcgov-webpack-wordpress.git",
+		"@wordpress/scripts": "^27.7"
+	}
+}
